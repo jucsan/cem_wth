@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <title>Con Estas Manos | With These Hands</title>
+        <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <link rel="icon" href="/images/fav.png">
+        <script src='/javascript/jquery.min.js'>
+        </script>
+        <script src="/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div id='desktop' class="ui container">
+            <div class="ui massive text menu">
+                <div class="fitted item logo">
+                    <a href="/">
+                        <img src="/images/cem.png">
+                    </a>
+                </div>
+
+                <div class="right menu">
+                    <a class="ui <%= typeof page !== 'undefined' && page === 'story' ? 'active ' : '' %>item" href="/stories">
+                        stories
+                    </a>
+                    <% if(!currentUser){ %>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'register' ? 'active ' : '' %>item" href="/register">
+                            sign up
+                        </a>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'login' ? 'active ' : '' %>item" href="/login">
+                            login
+                        </a>
+                    <% } else {%>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'profile' ? 'active ' : '' %>item" href="/user/<%=currentUser.username %>">
+                            <i class="user outline icon"></i> <%= currentUser.username %>
+                        </a>                        
+                        <a class="ui item" href="/logout">
+                            logout
+                        </a>
+                        
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        
+
+            <div id='mobile'>
+                <div class="mobile">
+                    <img src="/images/cem.png">
+                    <div id='sidebar'>
+                        <i class='big sidebar icon'></i>
+                    </div>
+                </div>
+
+                <div id='mobileMenu' class='title'>
+                    <a href="/">home</a>
+                    <a href='/stories'>stories</a>
+                    <% if(!currentUser){ %>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'register' ? 'activeMobile ' : '' %>item" href="/register">
+                            sign up
+                        </a>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'login' ? 'activeMobile ' : '' %>item" href="/login">
+                            login
+                        </a>
+                    <% } else {%>
+                        <a class="ui <%= typeof page !== 'undefined' && page === 'profile' ? 'activeMobile ' : '' %>item" href="/user/<%=currentUser.username %>">
+                            <i class="user outline icon"></i> <%= currentUser.username %>
+                        </a>                        
+                        <a class="ui item" href="/logout">
+                            logout
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+        
+        <div class="site-content">

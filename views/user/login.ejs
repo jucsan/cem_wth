@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+    
+    <div id="userForm">
+        <% if(error && error.length > 0){ %>
+            <div class="ui top attached negative message">
+                <div class="header title"><%= error %></div>
+            </div>
+        <% } %>
+        <div class="ui attached segment">
+            <h1 class="title">Login</h1>
+            <form class="ui form" action="/login" method="POST" >
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                
+                <button class="ui basic black button">Submit</button>
+            </form>
+        </div>
+        <div class="ui title secondary bottom attached segment">
+            Haven't signed up yet? <a href="/register">Register here </a>
+        </div>
+    </div>
+
+
+<% include ../partials/footer %>

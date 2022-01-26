@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+    
+    <div class="ui container">
+        <% if(error && error.length > 0){ %>
+            <div class="ui title negative message">
+                <div class="header"><%= error %></div>
+            </div>
+        <% } %>
+        <div id="newStory" class="ui piled segment">
+        <h1 class="title">Add A New Story</h1>
+        <form action="/stories" method="POST" enctype="multipart/form-data">
+            <div class="editImageBox title">
+                <div id='preview' class="none">
+                    <img class='preview' src="">
+                    <p class='message'></p>
+                    <div class="ui horizontal divider"> or </div>
+                </div>
+                <div>
+                    <input type="file" name="image" id="image" class="inputFile" accept="image/*">
+                    <label for="image"><i class="image icon"></i>Choose an image to upload</label>
+                </div>
+                <div id='errorImage' class="title ui pointing red basic label">
+                    File selected is not supported, please choose a new image
+                </div>
+            </div>
+            
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="text" rows='15' placeholder='Su historia / Your Story'></textarea>
+                    <div id='errorText' class="ui pointing red basic label">
+                        Your story cannot be left blank or it must be longer
+                    </div>
+                </div>
+                <div class="ui buttons">
+                    <a href="/user/<%= user %>" class="ui black basic button">cancel</a>
+                    <button class="ui positive basic button" disabled='true'>submit</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+<script src="../javascript/storyEntry.js"></script>
+<% include ../partials/footer %>

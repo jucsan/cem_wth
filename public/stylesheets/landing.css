@@ -1,0 +1,249 @@
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1 0 auto;
+    min-width: 300px;
+}
+
+#desktop {
+    display: none;
+}
+
+.ui.massive.menu {
+    margin: 0 -.5em; 
+    padding: 10px 0; 
+}
+
+.ui.text.menu .item>a img:not(.ui) {
+    width: 250px; 
+    margin: 0 15px 0 10px;
+}
+
+.ui.massive.menu .ui.active.item {
+    border-bottom: solid 1px grey;
+}
+
+.ui.massive.menu .ui.item:hover {
+    border-bottom: solid grey 1px;
+    transition: border-bottom 0.4s ease-out;
+    -webkit-transition: border-bottom 0.4s ease-out;
+    -moz-transition: border-bottom 0.4s ease-out;
+    -o-transition: border-bottom 0.4s ease-out;
+}
+
+.ui.massive.menu .ui.item{
+    padding: .78571429em; 
+    line-height: normal;
+    border-bottom: transparent;
+    background-color: transparent;
+    transition: border-bottom 0.5s ease-in;
+    -webkit-transition: border-bottom 0.5s ease-in;
+    -moz-transition: border-bottom 0.5s ease-in;
+    -o-transition: border-bottom 0.5s ease-in;
+}
+
+#mobile {}
+
+.mobile {
+    display: block;
+    font-size: .92857143rem;
+    min-height: 2.85714286em;
+    top: 0;
+    padding: 0 1em;
+}
+
+.mobile img{
+    max-width: 200px;
+    padding: 10px 0 5px 0
+}
+
+#sidebar {
+    display: block;
+    height: inherit;
+    float: right;
+    line-height: 70px;
+}
+
+#mobileMenu {
+    display: none;
+    overflow: hidden;
+    background-color: #f5f6f7;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+#mobileMenu a {
+    display: block;
+    padding: .92857143em 1.14285714em;
+    text-decoration: none;
+    color: grey;
+}
+
+#mobileMenu a:hover {
+    color: black;
+    background-color: #f1f2f3;
+}
+
+#mobileMenu .activeMobile {
+    color: black;
+    background-color: #f1f2f3;
+}
+
+#image {
+    z-index: 0;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    background-color: black;
+    margin: 0 auto;
+}
+
+#title {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    width: 290px;
+    top: 24%;
+    min-width: 290px;
+    left: 0;
+    right: 0;
+}
+
+#title #name {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    color: white;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#title #description {
+    font-size: 1em;
+    color: white;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#title a{
+    margin-top: 5px;
+}
+
+#image img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#text { margin: 20px 0 0 0; }
+
+#text p {
+    font-size: 1.1em;
+}
+
+#text p:nth-of-type(2){
+    margin-bottom: 15px;
+}
+
+#bottom { margin-top: 40px; }
+
+.ui.basic.black.button { 
+    margin: 5px 0;
+    width: 100%;
+}
+.ui.basic.green.button {
+    width: 100%;
+}
+
+#footer {
+    flex: none;
+    padding: 10px;
+    margin: 40px 0 0 0;
+    background-color: #f3f4f5;
+    color: grey;
+}
+
+.title {text-align: center;}
+
+@media only screen and (min-width: 400px){
+    #title {
+        width: 367px;
+        top: 30%;
+    }
+    
+    #title #name{
+        font-size: 38px;
+    }
+    
+    .ui.basic.black.button {
+        width: auto;
+    }
+    
+    .ui.basic.green.button {
+        width: 312px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    #title{
+        top: 33%;
+        width: 100%;
+    }
+    #title #name{
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #mobile { display: none;}
+    #desktop {display: block;}
+    #title {
+        top: 35%;
+    }
+    
+    #title #name {
+        font-size: 52px;
+    }
+
+    #title #description {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    #title { top: 40%; }
+    #title #name {
+        font-size: 56px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #title { top: 40%; }
+    #title #name {
+        font-size: 56px;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    #image img {
+        margin: 0 auto;
+        display: block;
+        max-width: 950px;
+    }
+
+    #title #name{
+        font-size: 62px;
+    }
+    
+}

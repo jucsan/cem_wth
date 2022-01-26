@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+    <div class="ui container">
+        <div id="newStory" class="ui piled segment">
+            <h1 class="title">Edit Your Story</h1>
+            <form id='form' action="/stories/edit/<%= story._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="editImageBox title">
+                    <div id='preview'>
+                        <img class='preview' src="<%= story.image %>">
+                        <p class='message'>Keep current image</p>
+                        <div class="ui horizontal divider"> or </div>
+                    </div>
+                        <div>
+                        <input type="file" name="image" id="image" class="inputFile" accept="image/*">
+                        <label for="image"><i class="image icon"></i>Choose a new image</label>
+                        </div>
+                        <div id='errorImage' class="ui pointing red basic label">
+                            File selected is not supported, please choose a new image
+                        </div>
+
+
+                </div>
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="text"><%= story.text %></textarea>
+                        <div id='errorText' class="ui pointing red basic label">
+                            Your story cannot be left blank or it must be longer
+                        </div>
+                    </div>
+                    <div class="ui buttons">
+                        <a href="/user/<%= user %>" class="ui black basic button">cancel</a>
+                        <button class="ui positive basic button">update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+<script src="../javascript/storyEntry.js"></script>
+<% include ../partials/footer %>

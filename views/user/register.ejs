@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+    
+
+    <div id="userForm">
+        <div class="ui top attached segment">
+            <h1 class="title">Sign Up</h1>
+            <form class="ui form" action="/register" method="POST" >
+                <div class="field">
+
+                    <label for="username">Username</label>
+                    <input type="text" id='username' name="username" placeholder="Username">
+                        <% if(name == 'UserExistsError' || name == 'MissingUsernameError'){ %>
+                            <div class="title ui pointing red basic label">
+                                <%= error %>
+                            </div>
+                        <% } %>
+                </div>
+                
+                <div class="field">
+                    <label for="email">Email 
+                        <div class="optional" data-content="Will only be used for account recovery">
+                            ( Optional <i class="help circle outline icon"></i>)
+                        </div>
+                    </label>
+                    <input type="text" id='email' name="email" placeholder="Email">
+                        <% if(error && error.length > 0 && error){ %>
+                            <div class="title ui pointing red basic label">
+                                <%= error %>
+                            </div>
+                        <% } %>
+                </div>
+                
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id='password' name="password" placeholder="Password">
+                        <% if(name == 'MissingPasswordError'){ %>
+                            <div class="title ui pointing red basic label">
+                                <%= error %>
+                            </div>
+                        <% } %>
+                </div>
+                <button id="submitButton" class="ui basic black button">Submit</button>
+            </form>
+        </div>
+        <div class="ui title bottom attached secondary segment">
+            Already signed up? <a href="/login">Login here</a>
+        </div>
+    </div>
+
+    <script src="../javascript/newUser.js"></script>
+<% include ../partials/footer %>

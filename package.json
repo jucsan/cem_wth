@@ -1,0 +1,39 @@
+{
+  "name": "cem",
+  "version": "1.0.0",
+  "description": "Con Estas Manos is a collection of pictures of worker's hands and the stories they tell.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "migrant",
+    "workers",
+    "hands",
+    "family"
+  ],
+  "author": "Juan Carlos Sanchez Velazquez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.15.5",
+    "extend": "^3.0.1",
+    "form-data": "^2.3.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.8.2",
+    "https": "^1.0.0",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.8",
+    "mongoose-simple-random": "^0.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.2.0",
+    "request": "^2.81.0",
+    "yamljs": "^0.3.0"
+  }
+}

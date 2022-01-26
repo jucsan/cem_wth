@@ -1,0 +1,471 @@
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+#errorContainer {
+    margin: 0 0 20px 0;
+}
+
+
+/*LOGIN/REGISTER*/
+
+#userForm {
+    width: 290px;
+    margin: 40px auto;
+}
+
+#userForm .button {width: 100%;}
+
+.ui.pointing.red.basic.label{
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.optional {
+    display: inline;
+    color: #a5a5a5;
+}
+
+/*STORY*/
+#newStory {
+    width: 100%;
+    margin: 40px auto;
+}
+
+/*NAV*/
+/*NAV SPACING*/
+#desktop {
+    display: none;
+    margin: 0 0 30px 0;
+}
+
+.ui.massive.menu {
+    margin: 0 -.5em; 
+    padding: 10px 0; 
+    border-bottom: solid black 1px;
+}
+
+.ui.text.menu .item>a img:not(.ui) {
+    width: 250px; 
+    margin: 0 15px 0 10px;
+}
+
+.ui.massive.menu .ui.active.item {
+    border-bottom: solid 1px grey;
+}
+
+.ui.massive.menu .ui.item:hover {
+    border-bottom: solid grey 1px;
+    transition: border-bottom 0.4s ease-out;
+    -webkit-transition: border-bottom 0.4s ease-out;
+    -moz-transition: border-bottom 0.4s ease-out;
+    -o-transition: border-bottom 0.4s ease-out;
+}
+
+.ui.massive.menu .ui.item{
+    padding: .78571429em; 
+    line-height: normal;
+    border-bottom: transparent;
+    background-color: transparent;
+    transition: border-bottom 0.5s ease-in;
+    -webkit-transition: border-bottom 0.5s ease-in;
+    -moz-transition: border-bottom 0.5s ease-in;
+    -o-transition: border-bottom 0.5s ease-in;
+}
+
+#mobile {margin-bottom: 20px;}
+
+.mobile {
+    display: block;
+    font-size: .92857143rem;
+    min-height: 2.85714286em;
+    top: 0;
+    padding: 0 1em;
+    border-bottom: 1px solid rgb(27, 28, 29);
+}
+
+.mobile img{
+    display: inline-block;
+    max-width: 200px;
+    padding: 10px 0 5px 0
+}
+
+#sidebar {
+    display: block;
+    height: inherit;
+    float: right;
+    line-height: 70px;
+
+}
+
+#mobileMenu {
+    display: none;
+    overflow: hidden;
+    background-color: #f5f6f7;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+#mobileMenu a {
+    display: block;
+    padding: .92857143em 1.14285714em;
+    text-decoration: none;
+    color: grey;
+}
+
+#mobileMenu a:hover {
+    color: black;
+    background-color: #f1f2f3;
+}
+
+#mobileMenu .activeMobile {
+    color: black;
+    background-color: #f1f2f3;
+}
+
+/*INDEX PAGE*/
+
+#gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#gallery a {
+    color: black;
+    text-decoration: none;
+}
+
+#gallery .ui.segment {
+    align-self: flex-start;
+    width: 100%;
+    min-height: inherit;
+    margin-top: 0;
+}
+
+#gallery img {
+    display: block;
+    max-width: 100%;
+    max-height: 180px;
+    margin: 0 auto 5px auto;
+}
+
+/*===*/
+
+#selectedStory {
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    border-bottom: solid black 1px;
+}
+
+#selectedStory img {
+    display: block;
+    float: none;
+    margin: 0 auto 2px auto;
+    height: auto;
+    max-width: 100%;
+
+}
+
+/*UPLOAD IMAGE*/
+.inputFile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputFile + label {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 0 1px #1b1c1d inset!important;
+    border-radius: .28571429rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.title {text-align: center;}
+
+.site-content {
+    flex: 1 0 auto;
+}
+
+/*=PROFILE=*/
+.userCard {
+    float: none;
+    margin: 0 auto 15px auto;
+    width: 100%;
+}
+
+.ui.card { margin: 0 auto; }
+
+.ui.card .ui.attached.bottom.button { background-color: #f3f4f5; }
+.stories {
+    overflow: hidden;
+    background-color: #f3f4f5;
+    border-radius: .28571429rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.storySegment {
+    overflow: auto;
+    padding: 15px;
+    margin: 0 0 10px 0;
+    border-bottom: solid rgb(229,229,229) 1px;
+}
+
+.storySegment:last-of-type {
+    border-bottom: none;
+    margin: 0;
+}
+
+.storySegment .content {min-height: 210px;}
+
+.storySegment img {
+    float: none;
+    max-width: 100%;
+    max-height: 200px;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.storySegment p {
+    white-space: pre-line;
+}
+
+.storySegment .admin {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0 5px 0;
+}
+
+.storySegment .admin .button{
+    float: none;
+}
+
+.deleteSlide {
+    width: 100%;
+    padding: 10px;
+    display: none;
+    margin-top: 5px;
+    border-radius: .28571429rem;
+    background-color: #fff6f6;
+    box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent
+}
+
+.deleteSlide .options {
+    margin-top: 5px;
+    overflow: visible;
+}
+
+#warning { color: #db2828;}
+/*==*/
+
+/*EDIT & NEW PAGE*/
+.editImageBox {
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-radius: .28571429rem;
+}
+
+.editImageBox img {width: 100%}
+
+.ui.horizontal.divider {
+    width: 95%;
+    margin: 10px auto 0 auto;
+}
+
+.editImageBox label { 
+    margin-top: 20px;
+    padding: .78571429em 1.5em;
+}
+
+.editImageBox #preview.none {
+    display: none;
+}
+
+.editImageBox #preview {
+    width: 100%;
+}
+
+.editImageBox #message {
+    padding: 5px 0 5px 0;
+    margin: 0!important;
+}
+
+#errorImage{
+    display: none; 
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#errorText{
+    display: none; 
+    width: 90%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ui.form .ui.buttons {
+    width: 100%;
+}
+
+.ui.form .ui.buttons .edit.ui.black.basic.button {
+    width: 50%;
+}
+
+.ui.form .ui.buttons .edit.ui.positive.basic.button {
+    width: 50%;
+}
+/*==*/
+
+#footer {
+    flex: none;
+    padding: 10px;
+    margin: 40px 0 0 0;
+    background-color: #f3f4f5;
+    color: grey;
+}
+
+@media only screen
+    and (min-width: 400px)
+    and (orientation: landscape){
+        #userForm {width: 350px;}
+}
+
+@media only screen and (min-width: 500px){
+
+    /*=PROFILE=*/
+    .userCard {
+        float:left;
+        margin: 0 10px 15px 0;
+        width: 210px;
+    }
+    
+    .stories {
+        padding: 5px;
+        border-radius: .28571429rem;
+        width: auto;
+    }
+    
+    .storySegment .content {min-height: 210px;}
+    
+    .storySegment img {
+        float: left;
+        max-width: 100%;
+        max-height: 200px;
+        margin: 5px 8px 10px 0;
+    }
+    /*==*/
+    
+    /*INDEX*/
+    #gallery .ui.segment #content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    #gallery img{
+        align-self: center;
+        max-width: 250px;
+        max-height: 180px;
+        margin: 0 5px 0 0;
+    }
+    
+    #gallery p{
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #mobile { display: none;}
+    #desktop {display: block;}
+    
+    #newStory {width: 85%;}
+    
+    #userForm {
+        width: 350px;
+        margin: 40px auto;
+    }
+    
+    .storySegment .admin .button{
+        float: right;
+    }
+    
+    .storySegment img {
+        margin: 5px 8px 2px 0px ;
+    }
+    
+    #gallery .ui.segment {
+        width: 45%;
+        align-self: auto;
+        margin-bottom: 15px;
+    }
+    
+    #gallery .ui.segment #content{
+        flex-direction: column;
+        overflow: hidden;
+        height: 100%;
+    }
+    
+    #gallery img{
+        margin: 0 0 5px 0;
+        overflow: hidden;
+    }
+
+    #gallery .ui.segment:nth-of-type(odd){
+        margin-right: 1.5%;
+    }
+    
+    #selectedStory img {
+        float: left;
+        max-width: 290px;
+        height: auto;
+        margin: 0 10px 2px 0;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #newStory {width: 75%;}
+}
+
+@media only screen and (min-width: 992px){
+    /*#newStory {width: 55%;}*/
+    
+    #gallery .ui.segment {
+        width: 47%;
+        
+    }
+    
+    #gallery .ui.segment:nth-of-type(odd){
+        margin-right: 2%;
+    }
+    
+    #gallery .ui.segment #content{
+        flex-direction: row;
+
+    }
+
+    #gallery img{
+        overflow: visible;
+        max-width: 260px;
+        max-height: 180px;
+        margin: 0 8px 0 0;
+    }
+    
+}

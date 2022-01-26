@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+    <div class="ui container">
+        <% if(error && error.length > 0){ %>
+            <div id='errorContainer' class="ui negative message">
+                <i class="close icon"></i>
+                <div class="header title">
+                    <%= error %>
+                </div>
+            </div>
+
+        <% } else if(success && success.length > 0) { %>
+            <div id='errorContainer' class="ui positive message">
+                <i class="close icon"></i>
+                <div class="header title">
+                    <%= success %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <div class="ui container">
+        <div id='gallery'>
+            <% story.forEach(function(story){%>
+                <div id="<%= story['_id'] %>" class="ui raised stacked segment">
+                    <a href="/stories/show/<%= story['_id']%>">
+                        <div id='content'>
+                            <img src="<%= story['image'] %>">
+                            <p><%= story['text'].substring(0, 210) %>...</p>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+
+<script src='../javascript/errorMessage.js'></script>
+
+<% include ../partials/footer %>
